@@ -1,1 +1,10 @@
----
+--- # test2 for package and service
+ - hosts: all
+   become: yes
+   gather_facts: yes
+   connection: ssh
+   tasks:
+   - name: install webservice
+     yum: 
+        name: httpd
+        state: latest
